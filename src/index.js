@@ -27,7 +27,11 @@ const renderer = new THREE.WebGLRenderer();
             'negz.jpg'
         ] );
 
-        const material = new THREE.LineBasicMaterial( { color: 0x03fc28 } );
+
+        const texture = new THREE.TextureLoader().load( '../texture/marioblockquest.png' );
+
+        const material = new THREE.MeshBasicMaterial( { map: texture } );
+
 
         let p1, p2, p3, p4, p5, p6, p7, p8, geometry, lines;
 
@@ -71,3 +75,6 @@ const renderer = new THREE.WebGLRenderer();
             renderer.render( scene, camera );
 
         }
+
+
+
