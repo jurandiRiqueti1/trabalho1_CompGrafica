@@ -50,10 +50,9 @@ scene.background = new THREE.CubeTextureLoader()
         'negz.jpg'
     ]);
 
-
 const texture = new THREE.TextureLoader().load('../img/madeira.jpg');
 
-const material = new THREE.MeshBasicMaterial({map: texture});
+const material = new THREE.MeshBasicMaterial({color: 0xffff00});
 
 
 let p1, p2, p3, p4, p5, p6, p7, p8, geometry, lines;
@@ -104,7 +103,7 @@ draw([p4, p8], geometry, lines, scene);
 
 function boxDraw(points, geometry, scene, texture) {
     geometry = new THREE.BufferGeometry().setFromPoints(points);
-    const materialBox = new THREE.MeshBasicMaterial({map: texture});
+    const materialBox = new THREE.MeshStandardMaterial({map: texture});
     const mesh = new THREE.Mesh(geometry, materialBox); 
     scene.add(mesh);
 }
@@ -114,8 +113,6 @@ function draw(points, geometry, lines, scene) {
     lines = new THREE.LineLoop(geometry, material);
     scene.add(lines);
 }
-
-
 
 const controls = new OrbitControls(camera, renderer.domElement);
 
