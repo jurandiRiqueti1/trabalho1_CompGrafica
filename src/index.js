@@ -12,9 +12,7 @@ const camera = new THREE.PerspectiveCamera(
     1,
     500
 );
-camera.position.set(30, 30, 50);
 camera.lookAt(0, 0, 0);
-
 const scene = new THREE.Scene();
 
 //glb
@@ -118,7 +116,8 @@ const controls = new OrbitControls(camera, renderer.domElement);
 
 animate();
 //controls.update() must be called after any manual changes to the camera's transform
-camera.position.set(0, 20, 100);
+camera.position.set(0, 80, 200);
+
 controls.update();
 
 
