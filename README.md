@@ -1,1 +1,23 @@
-# threejs-npm-webpack
+# Trabalho de Computação gráfica
+## _Avaliação A1 - Andrelise Buttner e Jurandi Riqueti_
+
+🚀 Começando
+Essas instruções permitirão que você obtenha uma cópia do projeto em operação na sua máquina local para fins de desenvolvimento e teste.
+
+📋 Pré-requisitos
+De que coisas você precisa para instalar o software e como instalá-lo? 
+
+Para que a aplicação funcione e necessário ter instalado o node.js, bem como o webpack, para que seja alterado o código pode ser usado um editor de código de sua preferência, é recomendado que se faça o uso da extensão do VsCode live server que permite ver em tempo real a aplicação.
+
+## Instalação
+
+O trabalho requer [Node.js](https://nodejs.org/) para rodar.
+
+Instale as dependecias e faça o build do projeto 
+
+```sh
+cd 
+trabalho1_CompGrafica
+npm install
+npm run build
+```
