@@ -11,9 +11,9 @@ Para que a aplicação funcione e necessário ter instalado o node.js, bem como 
 
 ## Instalação
 
-O trabalho requer [Node.js](https://nodejs.org/) para rodar.
+O trabalho requer [Node.js](https://nodejs.org/) e [Webpack](https://webpack.js.org/) para rodar.
 
-Instale as dependecias e faça o build do projeto 
+Instale as dependências e faça o build do projeto 
 
 ```sh
 cd 
