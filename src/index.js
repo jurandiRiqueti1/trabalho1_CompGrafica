@@ -1,4 +1,5 @@
 import * as THREE from 'three';
+import { Vector2, Vector3 } from 'three';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
 import {GLTFLoader} from 'three/examples/jsm/loaders/GLTFLoader.js'
 
@@ -15,12 +16,38 @@ const camera = new THREE.PerspectiveCamera(
 camera.lookAt(0, 0, 0);
 const scene = new THREE.Scene();
 
-//glb
+//glb1
 const loader = new GLTFLoader();
 loader.load('../glb/wraith.glb', function(glb){
     console.log(glb);
     const root = glb.scene;
-    root.position.set(0,10,0);
+    root.position.set(-50,-10,0);
+    scene.add(root);
+}, function(xhr) {
+    console.log((xhr.loaded/xhr.total * 100) + "% loaded");
+}, function(error) {
+    console.log("error");
+})
+
+//glb2
+loader.load('../glb/foxy.glb', function(glb){
+    console.log(glb);
+    const root = glb.scene;
+    root.scale.set(40,40,40);
+    root.position.set(50,-10,0);
+    scene.add(root);
+}, function(xhr) {
+    console.log((xhr.loaded/xhr.total * 100) + "% loaded");
+}, function(error) {
+    console.log("error");
+})
+
+//glb3
+loader.load('../glb/cat.glb', function(glb){
+    console.log(glb);
+    const root = glb.scene;
+    root.scale.set(2.5,2.5,2.5);
+    root.position.set(0,18,0);
     scene.add(root);
 }, function(xhr) {
     console.log((xhr.loaded/xhr.total * 100) + "% loaded");
@@ -48,7 +75,7 @@ scene.background = new THREE.CubeTextureLoader()
         'negz.jpg'
     ]);
 
-const texture = new THREE.TextureLoader().load('../img/madeira.jpg');
+const texture = new THREE.TextureLoader().load('../img/madeira.jpg');      
 
 const material = new THREE.MeshBasicMaterial({color: 0xffff00});
 
